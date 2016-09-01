@@ -5,8 +5,8 @@
 <div class="container">
   <div class="row">
     <% @deals.each do |deal| %>
-      <div class="col-md-3">
-        <%= link_to image_tag(deal.photo.url(:medium)), deal %>
+      <div class="col-md-3 col-sm-3">
+        <%= link_to image_tag(deal.photo.url(:square)), deal %>
       </div>
     <% end %>
   </div>
