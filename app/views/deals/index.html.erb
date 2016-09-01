@@ -2,11 +2,16 @@
 
 <h1>Paula and Jamie's Many Non-Linear Deals 🌻🐝</h1>
 
+<br>
+
 <div class="container">
   <div class="row">
     <% @deals.each do |deal| %>
-      <div class="col-md-3 col-sm-3">
-        <%= link_to image_tag(deal.photo.url(:square)), deal %>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+        <a href="/deals/<%= deal.id %>">
+        <img class="img-responsive" src="<%= deal.photo.url(:square)%>">
+        </img>
+      </a>
       </div>
     <% end %>
   </div>
