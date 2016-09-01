@@ -10,15 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829180332) do
+ActiveRecord::Schema.define(version: 20160901194922) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "deal_id"
+    t.integer  "user_id"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deal_id", "user_id"], name: "index_comments_on_deal_id_and_user_id", unique: true
+    t.index ["deal_id"], name: "index_comments_on_deal_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "deals", force: :cascade do |t|
     t.string   "title"
-    t.text     "photo"
     t.boolean  "done"
+    t.integer  "user_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "deal_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["deal_id", "user_id"], name: "index_likes_on_deal_id_and_user_id", unique: true
+    t.index ["deal_id"], name: "index_likes_on_deal_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
