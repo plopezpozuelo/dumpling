@@ -7,7 +7,7 @@
 <div class="container">
   <div class="row">
     <% @deals.each do |deal| %>
-      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4" style="padding:2px;">
         <a href="/deals/<%= deal.id %>">
         <img class="img-responsive" src="<%= deal.photo.url(:square)%>">
         </img>
