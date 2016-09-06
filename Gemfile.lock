@@ -47,9 +47,6 @@ GEM
       jmespath (~> 1.0)
     aws-sdk-resources (2.5.8)
       aws-sdk-core (= 2.5.8)
-    bootstrap-glyphicons (0.0.1)
-      railties (>= 3.0)
-      sass (>= 3.2)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -182,7 +179,6 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk (~> 2.3)
-  bootstrap-glyphicons
   bootstrap-sass (= 3.3.6)
   byebug (= 9.0.0)
   coffee-rails (= 4.2.1)
