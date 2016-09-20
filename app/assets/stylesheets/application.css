@@ -16,6 +16,7 @@
 
 body {
   background-color: #F1ECDB;
+  margin: 0;
 }
 
 .navbar {
@@ -29,9 +30,4 @@ body {
 
 .navbar-inverse .navbar-nav li a:hover {
   color: #F1ECDB;
-}
-
-.deal-list-title-test {
-  margin-top: 100px;
-  margin-bottom: 25px;
 }
