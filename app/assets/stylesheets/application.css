@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #F1ECDB;
+}
+
+.navbar {
+  background-color: #73987E;
+  border: 0;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: #D8C7AA;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+  color: #F1ECDB;
+}
+
+.deal-list-title {
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
