@@ -20,5 +20,6 @@
   <% end %>
 </div>
 
-</p>
+<button class="btn btn-default" data-toggle="confirmation">Confirmation</button>
+
 <%= link_to 'Delete this deal?', @deal, method: :delete, data: { confirm: 'Are you sure?' } %>
