@@ -10,19 +10,8 @@
     <%= favicon_link_tag 'favicon.png' %>
   </head>
 
-  <body>
-    <header class="navbar navbar-static-top navbar-inverse">
-      <div class="container">
-        <%= link_to "Dumpling", '#', id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",   '#' %></li>
-            <li><%= link_to "Help",   '#' %></li>
-            <li><%= link_to "Log in", '#' %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <body style="padding-bottom: 100px;">
+    <%= render "layouts/header" %>
 
     <div class="container">
       <%= yield %>
