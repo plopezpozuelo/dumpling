@@ -1,25 +1,24 @@
-<p id="notice"><%= notice %></p>
+<%= link_to deals_path, class: "back-icon" do %>
+    <span class="glyphicon glyphicon-arrow-left"></span>
+<% end %>
 
-<p>
-  <strong>Title:</strong>
+<div class="deal-title">
   <%= @deal.title %>
-</p>
+</div>
 
-<p>
-  <strong>Photo:</strong>
+<div class="deal-photo">
   <%= image_tag @deal.photo.url(:large) %>
-</p>
+</div>
 
-<p>
-  <strong>Done:</strong>
-  <%= @deal.done %>
-</p>
+<div class="deal-date">
+  Added by <%= @deal.user_id %> on <%= @deal.created_at %>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @deal.user_id %>
-</p>
+<div class="deal-done">
+  <% unless @deal.done %>
+    Mark deal as done?
+  <% end %>
+</div>
 
-<%= link_to 'Edit', edit_deal_path(@deal) %> |
-<%= link_to 'Back', deals_path %>
-<%= link_to 'Destroy', @deal, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
+<%= link_to 'Delete this deal?', @deal, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -33,6 +33,30 @@ body {
 }
 
 .img-responsive:hover {
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.deal-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  margin: 10px;
+}
+
+.deal-photo, .deal-date, .deal-done {
+  text-align: center;
+  margin: 30px;
+}
+
+.back-icon .glyphicon-arrow-left {
+  font-size: 2em;
+  color: #73987E;
+  margin: 20px 0 20px 30px;
+}
+
+.back-icon .glyphicon-arrow-left:hover {
+  text-decoration:none;
+  background-color:transparent;
+  color:#73977E;
 }
